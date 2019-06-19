@@ -126,7 +126,7 @@ $ pip install keras
 ## 安装Jetson推理引擎
 与Jetson tx2不同的是，Jetson Nano .img已经安装了JetPack，而tx2装好后只是一个纯净版的Ubuntu。
 
-因此这里可以直接构建Jetson推理引擎，参见[编译Jetson-inference代码]（https://github.com/vxgu86/jetson-inference/blob/master/docs/%E7%BC%96%E8%AF%91Jetson-inference%E4%BB%A3%E7%A0%81.md）。
+因此这里可以直接构建Jetson推理引擎，参见[编译Jetson-inference代码](https://github.com/vxgu86/jetson-inference/blob/master/docs/%E7%BC%96%E8%AF%91Jetson-inference%E4%BB%A3%E7%A0%81.md）。
 
 ## 外接camera设置
 
