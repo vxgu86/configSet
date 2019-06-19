@@ -77,7 +77,7 @@ $ pip install numpy
 ``` bash
 $ pip install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu==1.13.1+nv19.3
 ``` 
-安装NVIDIA的 tensorflow - gpu软件包需要大约40分钟。
+安装NVIDIA的 tensorflow-gpu软件包需要大约40分钟，其中有需要写权限的，我后来加了sudo。
 
 最后一步是安装SciPy和Keras：
 
