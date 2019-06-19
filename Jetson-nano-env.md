@@ -30,8 +30,18 @@ $ sudo apt-get install python3-dev
 
 ## 配置Python开发环境
 ** 奇怪 **
-安装Python包管理器 pip，
+安装Python包管理器 pip,
 看到python3 get-pip.py才意识到，可能是which python3
+``` bash
+vxgunano@vx-heaven:~$ which python
+/usr/bin/python
+vxgunano@vx-heaven:~$ python --version
+Python 2.7.15rc1
+vxgunano@vx-heaven:~/cvexp$ which python3
+/usr/bin/python3
+vxgunano@vx-heaven:~/cvexp$ python3 --version
+Python 3.6.8
+```
 
 ``` bash
 $ wget https://bootstrap.pypa.io/get-pip.py
