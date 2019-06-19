@@ -29,8 +29,14 @@ $ sudo apt-get install python3-dev
 ``` 
 
 ## 配置Python开发环境
-** 奇怪 **
+
 安装Python包管理器 pip,
+``` bash
+$ wget https://bootstrap.pypa.io/get-pip.py
+$ sudo python3 get-pip.py
+$ rm get-pip.py
+``` 
+**注意**
 看到python3 get-pip.py才意识到，可能是which python3
 ``` bash
 vxgunano@vx-heaven:~$ which python
@@ -42,12 +48,6 @@ vxgunano@vx-heaven:~/cvexp$ which python3
 vxgunano@vx-heaven:~/cvexp$ python3 --version
 Python 3.6.8
 ```
-
-``` bash
-$ wget https://bootstrap.pypa.io/get-pip.py
-$ sudo python3 get-pip.py
-$ rm get-pip.py
-``` 
 
 使用Python virtual environments可保持多个Python开发环境相互独立，便于在一张SD卡上维护不同的开发环境 。
 
@@ -88,6 +88,7 @@ $ pip install numpy
 $ pip install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu==1.13.1+nv19.3
 ``` 
 安装NVIDIA的 tensorflow-gpu软件包需要大约40分钟，其中有需要写权限的，我后来加了sudo。
+注意一定要在workon后安装，我在安装tf时没有进入workon，都安装到了
 
 最后一步是安装SciPy和Keras：
 
