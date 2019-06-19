@@ -66,7 +66,7 @@ $ mkvirtualenv cvnano -p python3
 
 在Jetson Nano上安装TensorFlow和Keras之前，首先需要安装NumPy。
 
-使用workon命令确保您位于 deep_learning虚拟环境中，然后安装NumPy：
+使用workon命令确保虚拟环境，然后安装NumPy：
 ``` bash
 $ workon cvnano
 $ pip install numpy
