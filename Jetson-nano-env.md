@@ -55,31 +55,28 @@ source /usr/local/bin/virtualenvwrapper.sh
 ```
 
 保存并退出编辑器，重新加载〜/ .bashrc文件 ：
-
+``` bash
 $ source ~/.bashrc
-
+``` 
 现在可以使用mkvirtualenv命令创建一个Python虚拟环境，命名虚拟环境为deep_learning，
-
-$ mkvirtualenv deep_learning -p python3
-
+``` bash
+$ mkvirtualenv cvnano -p python3
+``` 
 ## 安装TensorFlow和Keras
 
 在Jetson Nano上安装TensorFlow和Keras之前，首先需要安装NumPy。
 
 使用workon命令确保您位于 deep_learning虚拟环境中，然后安装NumPy：
-$ workon deep_learning
+``` bash
+$ workon cvnano
 $ pip install numpy
-
+``` 
 在Jetson Nano上安装NumPy需要大约10-15分钟的时间，因为它必须在系统上编译（目前没有用于Jetson Nano预构建版本的NumPy）。
 
-下一步是在Jetson Nano上安装Keras和TensorFlow，这里不用
-
-pip installtensorflow-gpu 
-
-NVIDIA已经提供了[TensorFlow for Jetson Nano](https://devtalk.nvidia.com/default/topic/1048776/official-tensorflow-for-jetson-nano-/)。
-
+下一步是在Jetson Nano上安装Keras和TensorFlow，这里不用pip installtensorflow-gpu。因为NVIDIA已经提供了[TensorFlow for Jetson Nano](https://devtalk.nvidia.com/default/topic/1048776/official-tensorflow-for-jetson-nano-/)。
+``` bash
 $ pip install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu==1.13.1+nv19.3
-
+``` 
 安装NVIDIA的 tensorflow - gpu软件包需要大约40分钟。
 
 最后一步是安装SciPy和Keras：
