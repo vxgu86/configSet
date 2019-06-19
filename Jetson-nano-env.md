@@ -88,7 +88,30 @@ $ pip install numpy
 $ pip install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu==1.13.1+nv19.3
 ``` 
 安装NVIDIA的 tensorflow-gpu软件包需要大约40分钟，其中有需要写权限的，我后来加了sudo。
+
 注意一定要在workon后安装，我在安装tf时没有进入workon，都安装到了
+``` bash
+Looking in indexes: https://pypi.org/simple, https://developer.download.nvidia.com/compute/redist/jp/v42
+Requirement already satisfied: tensorflow-gpu==1.13.1+nv19.3 in /usr/local/lib/python3.6/dist-packages (1.13.1+nv19.3)
+Requirement already satisfied: termcolor>=1.1.0 in /usr/local/lib/python3.6/dist-packages (from tensorflow-gpu==1.13.1+nv19.3) (1.1.0)
+Requirement already satisfied: grpcio>=1.8.6 in /usr/local/lib/python3.6/dist-packages (same) (1.21.1)
+Requirement already satisfied: six>=1.10.0 in /usr/lib/python3/dist-packages (same) (1.11.0)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in /usr/local/lib/python3.6/dist-packages (same) (1.1.0)
+Requirement already satisfied: tensorflow-estimator<1.14.0rc0,>=1.13.0 in /usr/local/lib/python3.6/dist-packages (same) (1.13.0)
+Requirement already satisfied: keras-applications>=1.0.6 in /usr/local/lib/python3.6/dist-packages (same) (1.0.8)
+Requirement already satisfied: protobuf>=3.6.1 in /usr/local/lib/python3.6/dist-packages (same) (3.8.0)
+Requirement already satisfied: absl-py>=0.1.6 in /usr/local/lib/python3.6/dist-packages (same) (0.7.1)
+Requirement already satisfied: tensorboard<1.14.0,>=1.13.0 in /usr/local/lib/python3.6/dist-packages (same) (1.13.1)
+Requirement already satisfied: wheel>=0.26 in /usr/local/lib/python3.6/dist-packages (same) (0.33.4)
+Requirement already satisfied: numpy>=1.13.3 in /usr/local/lib/python3.6/dist-packages (same) (1.16.4)
+Requirement already satisfied: astor>=0.6.0 in /usr/local/lib/python3.6/dist-packages (same) (0.8.0)
+Requirement already satisfied: gast>=0.2.0 in /usr/local/lib/python3.6/dist-packages (same) (0.2.2)
+Requirement already satisfied: mock>=2.0.0 in /usr/local/lib/python3.6/dist-packages (from tensorflow-estimator<1.14.0rc0,>=1.13.0->tensorflow-gpu==1.13.1+nv19.3) (3.0.5)
+Requirement already satisfied: h5py in /usr/local/lib/python3.6/dist-packages (from keras-applications>=1.0.6->tensorflow-gpu==1.13.1+nv19.3) (2.9.0)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.6/dist-packages (from protobuf>=3.6.1->tensorflow-gpu==1.13.1+nv19.3) (41.0.1)
+Requirement already satisfied: werkzeug>=0.11.15 in /usr/local/lib/python3.6/dist-packages (from tensorboard<1.14.0,>=1.13.0->tensorflow-gpu==1.13.1+nv19.3) (0.15.4)
+Requirement already satisfied: markdown>=2.6.8 in /usr/local/lib/python3.6/dist-packages (from tensorboard<1.14.0,>=1.13.0->tensorflow-gpu==1.13.1+nv19.3) (3.1.1)
+``` 
 
 最后一步是安装SciPy和Keras：
 
