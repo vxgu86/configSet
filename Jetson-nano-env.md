@@ -136,16 +136,16 @@ opencv的安装也是必须的，这是一个非常有用的计算机视觉开�
 
 ## 外接camera设置
 
-使用NVIDIA Jetson Nano时有两种输入摄像头设备选项：
+NVIDIA Jetson Nano时有两种输入摄像头设备选项：
 
 -- CSI相机模块，如Raspberry Pi camera模块
 -- USB网络摄像头
 
-这里以Logitech C920为例，它与Nano即插即用兼容。
+这里以Logitech C920为例，可以在Nano上即插即用。
 
-在以camera为输入的例子中，DEFAULT_CAMERA值设置为 - 1，这表示使用的是CSI摄像头。如果使用USB摄像头，需要改变 DEFAULT_CAMERA为0（或任何正确的/dev/video V4L2摄像头）。
+在以camera为输入的例子中，DEFAULT_CAMERA值设置为 -1，这表示使用的是CSI摄像头。如果使用USB摄像头，需要改变 DEFAULT_CAMERA为0（或任何正确的/dev/video V4L2摄像头）。
 
-**我用的是1，0 不成功，不管板载的camera在不在**
+**ls /dev | grep video 我这里显示有时是video1，有时是video0**
 
 ``` bash
 cd ~/jetson-inference/imagenet-camera
@@ -172,5 +172,14 @@ cd aarch64/bin/
 图像分类模型在Jetson Nano上对从摄像头输入的1280×720的运行速度差不多在10 FPS，同样分辨率的物体检测可运行在5 FPS。
 
 ## 运行自定义模型
+
+如果库编译时启用了GPU支持，相应的代码在GPU类设备上推理inference时就会自动运行在GPU上。如安装的tensorflow和keras，相应的代码运行时就会自动在GPU上运行；利用二者预训练的模型也会自动GPU执行运算。
+
+在Digits中训练的模型，可直接在命令行调用。
+
+如果Jetson nano支持Keras, TensorFlow, Caffe, Torch/PyTorch等深度学习库，就可以将相应的代码跑在上面。
+
+但是，OpenCV的深度神经网络模块却并不支持NVIDIA GPU，当然也包括Jetson nano。在正式支持之前，我们无法使cv2.dnn函数在GPU上运行。
+不过，Intel的OpenVINO toolkit, Movidius NCS, 以及其他OpenVINO兼容系列的产品都已经支持OpenCV的深度神经网络模块。
 
 
