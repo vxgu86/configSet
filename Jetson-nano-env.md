@@ -1,6 +1,6 @@
 # Jetson nano使用
 ## 概述
-https://files.pythonhosted.org/packages/cb/97/361c8c6ceb3eb765371a702ea873ff2fe112fa40073e7d2b8199db8eb56e/scipy-1.3.0.tar.gz
+
 Jetson Nano是一款类似于树莓派的嵌入式高性能边缘AI设备，搭载四核Cortex-A57处理器，配备4GB LPDDR4内存，16GB的eMMC 5.1存储;配备Maxwell架构128 CUDA核心的GPU（被大型散热器覆盖），具备472 GFLOPS计算能力，支持4K 60Hz视频解码，可以以嵌入式形式加载到各种终端平台。
 
 如此价位下并不包括全部所需的配件，以下是需要自己配置的：
