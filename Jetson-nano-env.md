@@ -1,7 +1,7 @@
 # Jetson nano使用
 ## 概述
 
-/usr/local/cuda-10.0 xitongzidai?
+/usr/local/cuda-10.0 是不是系统自带的？
 
 Jetson Nano是一款类似于树莓派的嵌入式高性能边缘AI设备，搭载四核Cortex-A57处理器，配备4GB LPDDR4内存，16GB的eMMC 5.1存储;配备Maxwell架构128 CUDA核心的GPU（被大型散热器覆盖），具备472 GFLOPS计算能力，支持4K 60Hz视频解码，可以以嵌入式形式加载到各种终端平台。
 
@@ -124,6 +124,10 @@ $ pip install keras
 ```
 
 安装耗时约35分钟。
+
+## 安装opencv
+opencv的安装也是必须的，这是一个非常有用的计算机视觉开发包。
+因为opencv 的安装比较通用，可参考这里。
 
 ## 安装Jetson推理引擎
 与Jetson tx2不同的是，Jetson Nano .img已经安装了JetPack，而tx2装好后只是一个纯净版的Ubuntu。
