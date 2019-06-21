@@ -16,7 +16,7 @@ Python
 $ sudo apt-get update
 $ sudo apt-get upgrade
 ```
-安装开发工具
+安装开发工具(already installed in config of Jetson-nano-env.md)
 ``` bash
 $ sudo apt-get install build-essential cmake unzip pkg-config
 ```
