@@ -194,12 +194,14 @@ OPENCV_EXTRA_MODULES_PATH/PYTHON_EXECUTABLE这两个选项一定要改为自己�
 ```
 
 <img src="./imgs/different-opencv-cmake.png">
+**我编译的跟别人做得不太一样，他的Interpreter和numpy都在虚拟环境中，而我的不是。**
+<img src="./imgs/pyimageweb-install-opencv-ubuntu-cmake.jpg">
 
 接下来就可以编译了，下面是利用4核进行编译（一般是2，4，8核）。
 ``` bash
 $ make -j4
 ```
-然后就是安装了
+然后就是安装。
 ``` bash
 $ sudo make install
 $ sudo ldconfig
