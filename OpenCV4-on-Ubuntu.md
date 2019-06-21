@@ -192,7 +192,8 @@ OPENCV_EXTRA_MODULES_PATH/PYTHON_EXECUTABLE这两个选项一定要改为自己�
 -- Build files have been written to: /home/vxgunano/opencv/build
 ```
 
-结果图
+<img src="./imgs/different-opencv-cmake.png">
+
 接下来就可以编译了，下面是利用4核进行编译（一般是2，4，8核）。
 ``` bash
 $ make -j4
