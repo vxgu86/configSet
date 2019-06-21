@@ -67,7 +67,7 @@ $ cd ~/opencv
 $ mkdir build
 $ cd build
 ```
-编译指令如下
+编译指令如下  **kan rongliang**
 ``` bash
 $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
@@ -197,11 +197,11 @@ OPENCV_EXTRA_MODULES_PATH/PYTHON_EXECUTABLE这两个选项一定要改为自己�
 **我编译的跟别人做得不太一样，他的Interpreter和numpy都在虚拟环境中，而我的不是。**
 <img src="./imgs/pyimageweb-install-opencv-ubuntu-cmake.jpg">
 
-接下来就可以编译了，下面是利用4核进行编译（一般是2，4，8核）。
+接下来就可以编译了，下面是利用4核进行编译（一般是2，4，8核）。**kan rongliang**
 ``` bash
 $ make -j4
 ```
-然后就是安装。
+然后就是安装。**kan rongliang**
 ``` bash
 $ sudo make install
 $ sudo ldconfig
