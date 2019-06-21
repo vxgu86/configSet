@@ -1,7 +1,7 @@
 # Jetson nano使用
 ## 概述
 
-/usr/local/cuda-10.0 是不是系统自带的？
+/usr/local/cuda-10.0 是不是系统自带的？ yes
 
 Jetson Nano是一款类似于树莓派的嵌入式高性能边缘AI设备，搭载四核Cortex-A57处理器，配备4GB LPDDR4内存，16GB的eMMC 5.1存储;配备Maxwell架构128 CUDA核心的GPU（被大型散热器覆盖），具备472 GFLOPS计算能力，支持4K 60Hz视频解码，可以以嵌入式形式加载到各种终端平台。
 
@@ -27,19 +27,16 @@ User Guide里建议烧录img后就刷机。
 $ sudo apt-get install git cmake
 $ sudo apt-get install libatlas-base-dev gfortran
 $ sudo apt-get install libhdf5-serial-dev hdf5-tools
+try to see if include python3
+which python
+python --version
+which python3
+python3 --version
 $ sudo apt-get install python3-dev
 ``` 
 
-## 配置Python开发环境
-
-安装Python包管理器 pip,
-``` bash
-$ wget https://bootstrap.pypa.io/get-pip.py
-$ sudo python3 get-pip.py
-$ rm get-pip.py
-``` 
-**注意**
-看到python3 get-pip.py才意识到，可能是which python3
+**注意 already there whether there after install python3-dev**
+看到python3 get-pip.py才意识到，可能是which python3 
 ``` bash
 vxgunano@vx-heaven:~$ which python
 /usr/bin/python
@@ -51,6 +48,15 @@ vxgunano@vx-heaven:~/cvexp$ python3 --version
 Python 3.6.8
 ```
 
+## 配置Python开发环境
+
+安装Python包管理器 pip,
+``` bash
+$ wget https://bootstrap.pypa.io/get-pip.py
+$ sudo python3 get-pip.py
+$ rm get-pip.py
+``` 
+**now pip is ok**
 使用Python virtual environments可保持多个Python开发环境相互独立，便于在一张SD卡上维护不同的开发环境 。
 这是一个好习惯，使环境之间互不干扰。比如一个Python + OpenCV 的项目需要scikit-learn (v0.14)，但其他的有需要新版本的scikit-learn (0.19)。
 虚拟环境有很多种，virtualenv+virtualenvwrapper是一种，也可以用conda或者PyEnv。
@@ -72,6 +78,22 @@ source /usr/local/bin/virtualenvwrapper.sh
 ``` bash
 $ source ~/.bashrc
 ``` 
+the belowing shows
+``` bash
+virtualenvwrapper.user_scripts creating /home/vxnano/.virtualenvs/premkproject
+virtualenvwrapper.user_scripts creating /home/vxnano/.virtualenvs/postmkproject
+virtualenvwrapper.user_scripts creating /home/vxnano/.virtualenvs/initialize
+virtualenvwrapper.user_scripts creating /home/vxnano/.virtualenvs/premkvirtualenv
+virtualenvwrapper.user_scripts creating /home/vxnano/.virtualenvs/postmkvirtualenv
+virtualenvwrapper.user_scripts creating /home/vxnano/.virtualenvs/prermvirtualenv
+virtualenvwrapper.user_scripts creating /home/vxnano/.virtualenvs/postrmvirtualenv
+virtualenvwrapper.user_scripts creating /home/vxnano/.virtualenvs/predeactivate
+virtualenvwrapper.user_scripts creating /home/vxnano/.virtualenvs/postdeactivate
+virtualenvwrapper.user_scripts creating /home/vxnano/.virtualenvs/preactivate
+virtualenvwrapper.user_scripts creating /home/vxnano/.virtualenvs/postactivate
+virtualenvwrapper.user_scripts creating /home/vxnano/.virtualenvs/get_env_details
+``` 
+
 现在可以使用mkvirtualenv命令创建一个Python虚拟环境，命名虚拟环境为cvnano。
 ``` bash
 $ mkvirtualenv cvnano -p python3
