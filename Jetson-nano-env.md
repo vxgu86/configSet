@@ -118,7 +118,15 @@ $ pip install numpy
 ``` bash
 $ pip install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v42 tensorflow-gpu==1.13.1+nv19.3
 ``` 
+
 安装NVIDIA的 tensorflow-gpu软件包需要大约40分钟，其中有需要写权限的，我后来加了sudo。
+``` bash
+  WARNING: Building wheel for termcolor failed: [Errno 13] Permission denied: '/home/vxnano/.cache/pip/wheels/7c'
+  WARNING: Building wheel for grpcio failed: [Errno 13] Permission denied: '/home/vxnano/.cache/pip/wheels/c2'
+  WARNING: Building wheel for gast failed: [Errno 13] Permission denied: '/home/vxnano/.cache/pip/wheels/5c'
+  WARNING: Building wheel for absl-py failed: [Errno 13] Permission denied: '/home/vxnano/.cache/pip/wheels/ee'
+  WARNING: Building wheel for h5py failed: [Errno 13] Permission denied: '/home/vxnano/.cache/pip/wheels/0a'
+``` 
 
 注意一定要在workon后安装，我在安装tf时没有进入workon，都安装到了
 ``` bash
@@ -142,7 +150,6 @@ Requirement already satisfied: h5py in /usr/local/lib/python3.6/dist-packages (f
 Requirement already satisfied: setuptools in /usr/local/lib/python3.6/dist-packages (from protobuf>=3.6.1->tensorflow-gpu==1.13.1+nv19.3) (41.0.1)
 Requirement already satisfied: werkzeug>=0.11.15 in /usr/local/lib/python3.6/dist-packages (from tensorboard<1.14.0,>=1.13.0->tensorflow-gpu==1.13.1+nv19.3) (0.15.4)
 Requirement already satisfied: markdown>=2.6.8 in /usr/local/lib/python3.6/dist-packages (from tensorboard<1.14.0,>=1.13.0->tensorflow-gpu==1.13.1+nv19.3) (3.1.1)
-
 ``` 
 
 最后一步是安装SciPy和Keras：
