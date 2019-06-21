@@ -117,3 +117,12 @@ $ cd ~/.virtualenvs/cv/lib/python3.5/site-packages/
 $ ln -s /usr/local/python/cv2/python-3.5/cv2.so cv2.so
 ``` 
 
+安装结束后，测试下。
+``` bash
+$ workon cv
+$ python            运行与环境相关联的Python解释器。这里都没有必要将之改为python3，因为这个环境中只有这一个版本的python。
+>>> import cv2
+>>> cv2.__version__
+'4.1.0'
+>>> quit()
+```
