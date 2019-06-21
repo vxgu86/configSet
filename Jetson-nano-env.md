@@ -52,6 +52,8 @@ Python 3.6.8
 ```
 
 使用Python virtual environments可保持多个Python开发环境相互独立，便于在一张SD卡上维护不同的开发环境 。
+这是一个好习惯，使环境之间互不干扰。比如一个Python + OpenCV 的项目需要scikit-learn (v0.14)，但其他的有需要新版本的scikit-learn (0.19)。
+虚拟环境有很多种，virtualenv+virtualenvwrapper是一种，也可以用conda或者PyEnv。
 
 安装virtualenv和virtualenvwrapper管理Python虚拟环境，
 ``` bash
@@ -70,10 +72,15 @@ source /usr/local/bin/virtualenvwrapper.sh
 ``` bash
 $ source ~/.bashrc
 ``` 
-现在可以使用mkvirtualenv命令创建一个Python虚拟环境，命名虚拟环境为deep_learning，
+现在可以使用mkvirtualenv命令创建一个Python虚拟环境，命名虚拟环境为cvnano。
 ``` bash
 $ mkvirtualenv cvnano -p python3
 ``` 
+另外，名字起的最好有区别性如
+py3cv4
+py3cv3
+py2cv2
+
 ## 安装TensorFlow和Keras
 
 在Jetson Nano上安装TensorFlow和Keras之前，首先需要安装NumPy。
