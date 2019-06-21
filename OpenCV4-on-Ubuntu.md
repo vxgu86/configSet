@@ -39,7 +39,7 @@ $ sudo apt-get install libatlas-base-dev gfortran
 $ sudo apt-get install python3-dev
 ```
 
-**2 安装OpenCV4**
+**2 下载OpenCV4并准备**
 下载 [opencv](https://github.com/opencv/opencv) 和 [opencv_contrib](https://github.com/opencv/opencv_contrib) 。contrib repo包含一些额外的模块和函数。
 ``` bash
 $ wget -O opencv.zip https://github.com/opencv/opencv/archive/4.1.0.zip
@@ -55,8 +55,8 @@ $ mv opencv_contrib-4.0.0 opencv_contrib
 
 以上情况处理结束之后，就可以创建虚拟环境并在其中安装OpenCV。
 
-**参见Jetson-nano-env.md中构建虚拟环境部分。**
-
+**3 参见Jetson-nano-env.md中构建虚拟环境部分。**
+**4 编译并安装**
 OpenCV依赖的库安装numpy，然后新建个build文件夹。
 ``` bash
 $ workon cv
@@ -81,4 +81,39 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 OPENCV_ENABLE_NONFREE一定要设置，设置之后才可以使用SIFT/SURF和一些专利保护的算法。
 OPENCV_EXTRA_MODULES_PATH/PYTHON_EXECUTABLE这两个选项一定要改为自己的设置。
 
+结果图
+接下来就可以编译了，下面是利用4核进行编译（一般是2，4，8核）。
+``` bash
+$ make -j4
+```
+然后就是安装了
+``` bash
+$ sudo make install
+$ sudo ldconfig
+```
+**5 OpenCV链接虚拟环境**
+
+确定python版本（以便于找到python 3绑定所在的文件夹）。
+``` bash
+$ workon cv
+$ python --version
+Python 3.5
+```
+**下面要进行符号链接以将opencv 4链接到python虚拟环境**
+
+opencv的python 3绑定应该位于以下文件夹中
+``` bash
+$ ls /usr/local/python/cv2/python-3.5
+cv2.cpython-35m-x86_64-linux-gnu.so
+``` 
+然后将之重命名为cv2.so，如果系统中同时安装的OpenCV 3 和 OpenCV 4，可以区分命名为cv2.opencv4.0.0.so 。
+``` bash
+$ cd /usr/local/python/cv2/python-3.5
+$ sudo mv cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
+``` 
+最后一步就是将opencv的cv2.so符号链接到虚拟环境中。
+``` bash
+$ cd ~/.virtualenvs/cv/lib/python3.5/site-packages/
+$ ln -s /usr/local/python/cv2/python-3.5/cv2.so cv2.so
+``` 
 
