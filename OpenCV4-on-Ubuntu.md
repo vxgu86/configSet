@@ -53,4 +53,32 @@ $ mv opencv-4.0.0 opencv
 $ mv opencv_contrib-4.0.0 opencv_contrib
 ```
 
+以上情况处理结束之后，就可以创建虚拟环境并在其中安装OpenCV。
+
+这部分可参见Jetson-nano-env.md中构建虚拟环境部分。
+
+OpenCV依赖的库安装numpy，然后新建个build文件夹。
+``` bash
+$ workon cv
+$ pip install numpy
+
+$ cd ~/opencv
+$ mkdir build
+$ cd build
+```
+编译指令如下
+``` bash
+$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
+	-D CMAKE_INSTALL_PREFIX=/usr/local \
+	-D INSTALL_PYTHON_EXAMPLES=ON \
+	-D INSTALL_C_EXAMPLES=OFF \
+	-D OPENCV_ENABLE_NONFREE=ON \
+	-D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \
+	-D PYTHON_EXECUTABLE=~/.virtualenvs/cvnano/bin/python \
+	-D BUILD_EXAMPLES=ON ..
+```
+
+OPENCV_ENABLE_NONFREE一定要设置，设置之后才可以使用SIFT/SURF和一些专利保护的算法。
+OPENCV_EXTRA_MODULES_PATH/PYTHON_EXECUTABLE这两个选项一定要改为自己的设置。
+
 
