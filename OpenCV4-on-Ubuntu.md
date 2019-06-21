@@ -56,6 +56,7 @@ $ mv opencv_contrib-4.0.0 opencv_contrib
 以上情况处理结束之后，就可以创建虚拟环境并在其中安装OpenCV。
 
 **3 参见Jetson-nano-env.md中构建虚拟环境部分。**
+
 **4 编译并安装**
 OpenCV依赖的库安装numpy，然后新建个build文件夹。
 ``` bash
