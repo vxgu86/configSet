@@ -39,4 +39,18 @@ $ sudo apt-get install libatlas-base-dev gfortran
 $ sudo apt-get install python3-dev
 ```
 
-**2 安装OpenCV4依赖库**
+**2 安装OpenCV4**
+下载 [opencv](https://github.com/opencv/opencv) 和 [opencv_contrib](https://github.com/opencv/opencv_contrib) 。contrib repo包含一些额外的模块和函数。
+``` bash
+$ wget -O opencv.zip https://github.com/opencv/opencv/archive/4.1.0.zip
+$ wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.1.0.zip
+```
+解压缩并重命名。
+``` bash
+$ unzip opencv.zip
+$ unzip opencv_contrib.zip
+$ mv opencv-4.0.0 opencv
+$ mv opencv_contrib-4.0.0 opencv_contrib
+```
+
+
