@@ -1,7 +1,8 @@
 # Jetson nano使用
 ## 概述
 
-/usr/local/cuda-10.0 是不是系统自带的？ yes
+/usr/local/cuda-10.0 是系统自带的。
+
 swap???
 
 Jetson Nano是一款类似于树莓派的嵌入式高性能边缘AI设备，搭载四核Cortex-A57处理器，配备4GB LPDDR4内存，16GB的eMMC 5.1存储;配备Maxwell架构128 CUDA核心的GPU（被大型散热器覆盖），具备472 GFLOPS计算能力，支持4K 60Hz视频解码，可以以嵌入式形式加载到各种终端平台。
@@ -28,15 +29,15 @@ User Guide里建议烧录img后就刷机。
 $ sudo apt-get install git cmake
 $ sudo apt-get install libatlas-base-dev gfortran
 $ sudo apt-get install libhdf5-serial-dev hdf5-tools
-try to see if include python3
+
+$ sudo apt-get install python3-dev
+``` 
+**python3是不是系统自带的？在pip python3-dev之前试试。**
 which python
 python --version
 which python3
 python3 --version
-$ sudo apt-get install python3-dev
-``` 
 
-**注意 already there whether there after install python3-dev**
 看到python3 get-pip.py才意识到，可能是which python3 
 ``` bash
 vxgunano@vx-heaven:~$ which python
@@ -57,7 +58,7 @@ $ wget https://bootstrap.pypa.io/get-pip.py
 $ sudo python3 get-pip.py
 $ rm get-pip.py
 ``` 
-**now pip is ok**
+
 使用Python virtual environments可保持多个Python开发环境相互独立，便于在一张SD卡上维护不同的开发环境 。
 这是一个好习惯，使环境之间互不干扰。比如一个Python + OpenCV 的项目需要scikit-learn (v0.14)，但其他的有需要新版本的scikit-learn (0.19)。
 虚拟环境有很多种，virtualenv+virtualenvwrapper是一种，也可以用conda或者PyEnv。
@@ -129,7 +130,7 @@ $ pip install --extra-index-url https://developer.download.nvidia.com/compute/re
   WARNING: Building wheel for h5py failed: [Errno 13] Permission denied: '/home/vxnano/.cache/pip/wheels/0a'
 ``` 
 
-注意一定要在workon后安装，我在安装tf时没有进入workon，都安装到了
+这里有个问题，不管是不是workon，tf都装在系统上，而不是虚拟环境中。
 ``` bash
 Looking in indexes: https://pypi.org/simple, https://developer.download.nvidia.com/compute/redist/jp/v42
 Requirement already satisfied: tensorflow-gpu==1.13.1+nv19.3 in /usr/local/lib/python3.6/dist-packages (1.13.1+nv19.3)
