@@ -160,6 +160,13 @@ Requirement already satisfied: markdown>=2.6.8 in /usr/local/lib/python3.6/dist-
 $ sudo pip install scipy
 $ sudo pip install keras
 ```
+error without sudo
+``` bash
+Building wheels for collected packages: scipy
+  WARNING: Building wheel for scipy failed: [Errno 13] Permission denied: '/home/vxnano/.cache/pip/wheels/58'
+Failed to build scipy
+ERROR: Could not build wheels for scipy which use PEP 517 and cannot be installed directly
+``` 
 
 安装耗时约35分钟。
 
