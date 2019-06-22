@@ -42,3 +42,68 @@ Blocks 是Airsim自带的一个项目，主要用来进行测试，基础，且�
 在Visual Studio中修改代码之后需要重新编译，点击 F5 重新运行。AirSim\Unreal\Environments\Blocks目录下还有几个batch文件来同步代码/清理等。
 
 **新建Unreal+AirSim项目**
+
+（1）以Landscape Mountain为例，到下载目录中打开LandscapeMountains.uproject，
+File菜单-- New C++ class默认类的类型None 和名字MyClass, 点击Create Class。Unreal要求项目中至少有一个source file，触发编译后会打开相应的LandscapeMountains.sln。
+
+（2）**从AirSim拷贝Unreal\Plugins到LandscapeMountains文件夹。**
+
+（3）然后打开并修改LandscapeMountains.uproject
+``` bash
+{
+    "FileVersion": 3,
+    "EngineAssociation": "4.18",
+    "Category": "Samples",
+    "Description": "",
+    "Modules": [
+        {
+            "Name": "LandscapeMountains",
+            "Type": "Runtime",
+            "LoadingPhase": "Default",   
+            "AdditionalDependencies": [
+                "AirSim"
+            ]
+        }
+    ],
+    "TargetPlatforms": [
+        "MacNoEditor",
+        "WindowsNoEditor"
+    ],
+    "Plugins": [
+        {
+            "Name": "AirSim",
+            "Enabled": true
+        }
+    ]
+}
+```
+**注意** 如果是组内最后一项，不用“，”，但是后面还有内容的话就要加“，”，否则会报错。
+Couldn't set association for project. Check the file is writeable
+
+（4）关闭Visual Studio 和Unreal Editor，在**LandscapeMountains.uproject**右击并选择**Generate Visual Studio Project Files**。
+生成结束后重新打开LandscapeMountains.sln，设置生成选项为DebugGame Editor Win64，F5运行后会打开Unreal Editor，这时候就可以修改environment, assets等游戏资源。
+（5）在这个环境中首先要做的事情是添加PlayerStart对象，在世界大纲视图（World Outliner）中，注意location 不要太高，这是AirSim plugin创建
+vehicle的位置。
+
+然后在窗口Window-世界设置World Settings里设置GameMode Override为AirSimGameMode。
+
+（6）'Edit->Editor Preferences' ，搜索框中搜'CPU'，将'Use Less CPU when in Background'去掉勾选，这样UE失去焦点后也不会降速的太厉害。
+
+保存后就可以运行，配置结束。
+
+**选择仿真器**
+
+设置仿真汽车还是无人机，可参见[SimMode](settings.md#SimMode)，也可以看[car设置](using_car.md)。
+
+**保持项目环境中AirSim与Github中版本一致**
+
+保持AirSim的代码与Github中的一致，需要经常从Github将本地Airsim代码更新为最新版本。
+
+1 将clean.bat（linux用户为 clean.sh）放在环境的根文件夹，运行此文件以清除Unreal项目中生成的中间文件；
+
+2 git pull下repo，然后build.cmd（Linux用户为 /build.sh）；
+
+3 再将airsim/unreal/plugins文件夹拷入 项目/plugins文件夹来替换。
+
+4 右键单击.uproject文件并选择“Generate Visual Studio Project Files”。Linux不需要这样做。
+
