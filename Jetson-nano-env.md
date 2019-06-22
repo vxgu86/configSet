@@ -157,8 +157,8 @@ Requirement already satisfied: markdown>=2.6.8 in /usr/local/lib/python3.6/dist-
 最后一步是安装SciPy和Keras：
 
 ``` bash
-$ pip install scipy
-$ pip install keras
+$ sudo pip install scipy
+$ sudo pip install keras
 ```
 
 安装耗时约35分钟。
