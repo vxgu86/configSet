@@ -84,6 +84,7 @@ Couldn't set association for project. Check the file is writeable
 
 （4）关闭Visual Studio 和Unreal Editor，在**LandscapeMountains.uproject**右击并选择**Generate Visual Studio Project Files**。
 生成结束后重新打开LandscapeMountains.sln，设置生成选项为DebugGame Editor Win64，F5运行后会打开Unreal Editor，这时候就可以修改environment, assets等游戏资源。
+
 （5）在这个环境中首先要做的事情是添加PlayerStart对象，在世界大纲视图（World Outliner）中，注意location 不要太高，这是AirSim plugin创建
 vehicle的位置。
 
