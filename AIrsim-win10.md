@@ -46,6 +46,8 @@ Blocks 是Airsim自带的一个项目，主要用来进行测试，基础，且�
 （1）以Landscape Mountain为例，到下载目录中打开LandscapeMountains.uproject，
 File菜单-- New C++ class默认类的类型None 和名字MyClass, 点击Create Class。Unreal要求项目中至少有一个source file，触发编译后会打开相应的LandscapeMountains.sln。
 
+若已有项目，从下面开始即可。
+
 （2）**从AirSim拷贝Unreal\Plugins到LandscapeMountains文件夹。**
 
 （3）然后打开并修改LandscapeMountains.uproject
