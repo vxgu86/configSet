@@ -67,7 +67,7 @@ $ cd ~/opencv
 $ mkdir build
 $ cd build
 ```
-编译指令如下  **kan rongliang**
+编译指令如下  **kan rongliang40.9 for 64 after swap**
 ``` bash
 $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
