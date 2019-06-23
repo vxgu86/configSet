@@ -67,7 +67,7 @@ $ cd ~/opencv
 $ mkdir build
 $ cd build
 ```
-编译指令如下  **kan rongliang40.9 for 64 after swap**
+编译指令如下  **kan rongliang40.9 for 64 after swap  after cmake 40.5**
 ``` bash
 $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
@@ -79,10 +79,9 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D BUILD_EXAMPLES=ON ..
 ```
 
-``` bash
 OPENCV_ENABLE_NONFREE一定要设置，设置之后才可以使用SIFT/SURF和一些专利保护的算法。
 OPENCV_EXTRA_MODULES_PATH/PYTHON_EXECUTABLE这两个选项一定要改为自己的设置。
-
+``` bash
 -- General configuration for OpenCV 4.1.0 =====================================
 --   Version control:               unknown
 -- 
@@ -196,6 +195,18 @@ OPENCV_EXTRA_MODULES_PATH/PYTHON_EXECUTABLE这两个选项一定要改为自己�
 <img src="./imgs/different-opencv-cmake.png">
 **我编译的跟别人做得不太一样，他的Interpreter和numpy都在虚拟环境中，而我的不是。**
 <img src="./imgs/pyimageweb-install-opencv-ubuntu-cmake.jpg">
+
+now ok maybe sth wrong when I compied python?????
+``` bash
+-- 
+--   Python 3:
+--     Interpreter:                 /home/vxnano/.virtualenvs/cvnano/bin/python3 (ver 3.6.8)
+--     Libraries:                   /usr/lib/aarch64-linux-gnu/libpython3.6m.so (ver 3.6.8)
+--     numpy:                       /home/vxnano/.virtualenvs/cvnano/lib/python3.6/site-packages/numpy/core/include (ver 1.16.4)
+--     install path:                lib/python3.6/site-packages/cv2/python-3.6
+-- 
+--   Python (for build):            /home/vxnano/.virtualenvs/cvnano/bin/python3
+```
 
 接下来就可以编译了，下面是利用4核进行编译（一般是2，4，8核）。**kan rongliang**
 ``` bash
