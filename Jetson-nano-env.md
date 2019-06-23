@@ -114,6 +114,22 @@ py2cv2
 $ workon cvnano
 $ pip install numpy
 ``` 
+
+whether numpy exist before install
+installed both for two envs?
+``` bash
+vxnano@vx-heaven:~$ pip install numpy
+WARNING: The directory '/home/vxnano/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+WARNING: The directory '/home/vxnano/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Requirement already satisfied: numpy in /usr/local/lib/python3.6/dist-packages (1.16.4)
+``` 
+``` bash
+(cvnano) vxnano@vx-heaven:~$ pip install numpy
+WARNING: The directory '/home/vxnano/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+WARNING: The directory '/home/vxnano/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Requirement already satisfied: numpy in ./.virtualenvs/cvnano/lib/python3.6/site-packages (1.16.4)
+``` 
+
 在Jetson Nano上安装NumPy需要大约10-15分钟的时间，因为它必须在系统上编译（目前没有用于Jetson Nano预构建版本的NumPy）。
 
 下一步是在Jetson Nano上安装Keras和TensorFlow，这里不用pip installtensorflow-gpu。因为NVIDIA已经提供了[TensorFlow for Jetson Nano](https://devtalk.nvidia.com/default/topic/1048776/official-tensorflow-for-jetson-nano-/  )。
