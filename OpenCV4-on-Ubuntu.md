@@ -237,13 +237,13 @@ cv2.cpython-36m-aarch64-linux-gnu.so
 ``` 
 然后将之重命名为cv2.so，如果系统中同时安装的OpenCV 3 和 OpenCV 4，可以区分命名为cv2.opencv4.0.0.so 。
 ``` bash
-$ cd /usr/local/python/cv2/python-3.5
+$ cd /usr/local/lib/python3.6/site-packages/cv2/python-3.6
 $ sudo mv cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
 ``` 
 最后一步就是将opencv的cv2.so符号链接到虚拟环境中。
 ``` bash
 $ cd ~/.virtualenvs/cv/lib/python3.5/site-packages/
-$ ln -s /usr/local/python/cv2/python-3.5/cv2.so cv2.so
+$ ln -s /usr/local/lib/python3.6/site-packages/cv2/python-3.6/cv2.so cv2.so
 ``` 
 
 安装结束后，测试下。
