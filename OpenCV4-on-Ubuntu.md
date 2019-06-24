@@ -58,6 +58,7 @@ $ mv opencv_contrib-4.0.0 opencv_contrib
 **3 参见Jetson-nano-env.md中构建虚拟环境部分。**
 
 **4 编译并安装**
+
 OpenCV依赖的库安装numpy，然后新建个build文件夹。
 ``` bash
 $ workon cv
@@ -67,7 +68,7 @@ $ cd ~/opencv
 $ mkdir build
 $ cd build
 ```
-编译指令如下  **kan rongliang40.9 for 64 after swap  after cmake 40.5**
+编译指令如下  **40.9 for 64，cmake后剩 40.5，可见make并不占太多空间**
 ``` bash
 $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
@@ -196,7 +197,7 @@ OPENCV_EXTRA_MODULES_PATH/PYTHON_EXECUTABLE这两个选项一定要改为自己�
 **我编译的跟别人做得不太一样，他的Interpreter和numpy都在虚拟环境中，而我的不是。**
 <img src="./imgs/pyimageweb-install-opencv-ubuntu-cmake.jpg">
 
-now ok maybe sth wrong when I compied python?????
+完全按照顺序来的话如下，是没有问题的，看来上次是我弄错了。
 ``` bash
 -- 
 --   Python 3:
@@ -208,7 +209,7 @@ now ok maybe sth wrong when I compied python?????
 --   Python (for build):            /home/vxnano/.virtualenvs/cvnano/bin/python3
 ```
 
-接下来就可以编译了，下面是利用4核进行编译（一般是2，4，8核）。**kan rongliang**
+接下来就可以编译了，下面是利用4核进行编译（一般是2，4，8核）。**做完后剩27.3G，用了13G；另外我这-j4就一直掉电， -j2正常编译，这是能利用的cpu数**
 ``` bash
 $ make -j4
 ```
