@@ -245,6 +245,7 @@ $ sudo mv cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
 $ cd ~/.virtualenvs/cv/lib/python3.5/site-packages/
 $ ln -s /usr/local/lib/python3.6/site-packages/cv2/python-3.6/cv2.so cv2.so
 ``` 
+这时/.virtualenvs/cv/lib/python3.5/site-packages/目录下就会多出cv2.so的软链。
 
 安装结束后，测试下。
 ``` bash
