@@ -22,3 +22,6 @@ https://developer.nvidia.com/embedded/jetson-nano-dl-inference-benchmarks
 
 sdkmanager的好处是把主机和nano的系统都给配置好了。
 
+https://docs.nvidia.com/sdk-manager/download-run-sdkm/index.html
+
+https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html
