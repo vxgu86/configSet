@@ -20,10 +20,17 @@ https://devtalk.nvidia.com/default/topic/1050377/jetson-nano/deep-learning-infer
 
 https://developer.nvidia.com/embedded/jetson-nano-dl-inference-benchmarks
 
-测试其中的Tiny YOLO v3，安装过程中出现opencv的错误，干脆刷机**JetPack 4.2**。
+测试其中的Tiny YOLO v3，安装过程中出现opencv的错误，这个系统是直接flash的nano 的image，原版带没带opencv？下次记得试试。
+
+<img src="./imgs/deepstream-make-error.png">
+
+
+干脆刷机**JetPack 4.2**。
 
 sdkmanager的好处是把主机和nano的系统都给配置好了。
 
 https://docs.nvidia.com/sdk-manager/download-run-sdkm/index.html
 
 https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html
+
+刷机后，一切正常，测试
