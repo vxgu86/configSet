@@ -1,17 +1,24 @@
 20190627
 
-主要用这个把 nano的配置、tensorflow等的安装都走了一遍。
+# 尝试yolo-tf
 
-参考的是
-https://github.com/valdivj/jetson-nano-yolov2-darkflow
+参考https://github.com/valdivj/jetson-nano-yolov2-darkflow配置nano，tensorflow、opencv等的安装都走了一遍。
 
 但结果不好。
 <img src="./imgs/nano-memory.jpg">
 
-跑的是yolov2-tiny-voc模型，nano跑在这里就直接掉电了。
+跑的是yolov2-tiny-voc模型，nano跑在这里就直接掉电了。因为内存不足。
+
+总结一下，他的优化只要是内存采用swap扩为6G。
 
 
-发现官方竟然有benchmark。
+# 发现官方竟然有benchmark，而且还很多！！！！
 
-尽快尝试
 https://devtalk.nvidia.com/default/topic/1050377/jetson-nano/deep-learning-inference-benchmarking-instructions/
+
+https://developer.nvidia.com/embedded/jetson-nano-dl-inference-benchmarks
+
+测试其中的Tiny YOLO v3，安装过程中出现opencv的错误，干脆刷机**JetPack 4.2**。
+
+sdkmanager的好处是把主机和nano的系统都给配置好了。
+
