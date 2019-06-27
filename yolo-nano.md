@@ -2,7 +2,9 @@
 
 # 尝试yolo-tf
 
-参考https://github.com/valdivj/jetson-nano-yolov2-darkflow配置nano，tensorflow、opencv等的安装都走了一遍。
+参考https://github.com/valdivj/jetson-nano-yolov2-darkflow
+
+配置nano，tensorflow、opencv等的安装都走了一遍。
 
 但结果不好。
 <img src="./imgs/nano-memory.jpg">
