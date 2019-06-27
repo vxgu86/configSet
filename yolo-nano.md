@@ -7,7 +7,7 @@
 配置nano，tensorflow、opencv等的安装都走了一遍。
 
 但结果不好。
-<img src="./imgs/nano-memory.jpg">
+<img src="./imgs/nano-memory.jpg" width="500">
 
 跑的是yolov2-tiny-voc模型，nano跑在这里就直接掉电了。因为内存不足。
 
@@ -22,12 +22,15 @@ https://developer.nvidia.com/embedded/jetson-nano-dl-inference-benchmarks
 
 测试其中的Tiny YOLO v3，安装过程中出现opencv的错误，这个系统是直接flash的nano 的image，原版带没带opencv？下次记得试试。
 
-<img src="./imgs/deepstream-make-error.png">
+<img src="./imgs/deepstream-make-error.png" width="500">
 
 
 干脆刷机**JetPack 4.2**。
 
 sdkmanager的好处是把主机和nano的系统都给配置好了。
+
+<img src="./imgs/jetpack-nano.png" width="500">
+<img src="./imgs/jetpack-tx2.png" width="500">
 
 https://docs.nvidia.com/sdk-manager/download-run-sdkm/index.html
 
