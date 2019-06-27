@@ -2,6 +2,7 @@
 ## 概述
 
 /usr/local/cuda-10.0 是系统自带的。
+/usr/src/tensorrt 是自带的。
 
 swap???
 
