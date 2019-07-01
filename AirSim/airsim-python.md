@@ -13,9 +13,9 @@ DroneShell
 
 arm--takeoff
 
-param set COM_OBL_ACT 1  land 
+param set COM_OBL_ACT 1      原来是land 
 
-param set COM_OBL_RC_ACT 5   position
+param set COM_OBL_RC_ACT 5   原来是position
 
 https://github.com/microsoft/AirSim/issues?utf8=%E2%9C%93&q=droneshell+land
 
