@@ -11,6 +11,7 @@ Epic Games Launcher--**Unreal Engine 4.18**（注意在下面的安装之前将c
 Airsim有已经编译好的直接下载版本，如ZhangJiaJie等，但是要开发还是得自己编译。
 
 **编译Airsim**
+
 （1）克隆下来: git clone https://github.com/Microsoft/AirSim.git, 
 
 （2）打开 x64 Native Tools Command Prompt for VS 2017。cd AirSim，build.cmd，执行后会在Unreal\Plugins直接创建plugin，使用时拷入Unreal项目即可。
@@ -27,6 +28,7 @@ d:\airsim\airlib\deps\eigen3\eigen\src\core\arch\cuda\half.h : warning C4819: �
 。。。
 。。。
 ```
+
 这个bug是因为half.h 在注释部分使用了非 UTF-8 编码的双引号导致的。找到这个文件，将 16 行的 "AS IS"的引号替换一下。
 
 **体验已有Blocks 项目**
@@ -46,7 +48,7 @@ Blocks 是Airsim自带的一个项目，主要用来进行测试，基础，且�
 （1）以Landscape Mountain为例，到下载目录中打开LandscapeMountains.uproject，
 File菜单-- New C++ class默认类的类型None 和名字MyClass, 点击Create Class。Unreal要求项目中至少有一个source file，触发编译后会打开相应的LandscapeMountains.sln。
 
-若已有项目，从下面开始即可。
+若已有类在项目中，从下面开始即可。
 
 （2）**从AirSim拷贝Unreal\Plugins到LandscapeMountains文件夹。**
 
