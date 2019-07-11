@@ -1,5 +1,3 @@
-教程
-
 
 按教程编译结束之后并无错误，在unity中打开demo时一直提示，
 Problem in starting AirSim Server!!!
@@ -30,11 +28,15 @@ AirSim/Unity/UnityDemo/Assets/AirSimAssets/Scripts/Utilities/AirSimSettings.cs�
 
 尝试
 1 去掉    
+
+```
       "Vehicles": {
         "PX4": {
           "VehicleType": "PX4Multirotor"
         }
       }
+      
+```
  整个去掉不行，没有默认，也不能不存在。
  2 "DefaultVehicleConfig": "PX4", 也不行，因为这个工具的配置没有编译 SITL 或者 HIL。
  
