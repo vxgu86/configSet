@@ -18,7 +18,7 @@ https://github.com/thtrieu/darkflow
 
 跑的是yolov2-tiny-voc模型，nano跑在这里就直接掉电了。因为内存不足。
 
-总结一下，他的优化只要是内存采用swap扩为6G。
+总结一下，他的优化只要是内存采用swap扩为6G，
 
 
 # 发现官方竟然有benchmark，而且还很多！！！！
@@ -43,4 +43,4 @@ https://docs.nvidia.com/sdk-manager/download-run-sdkm/index.html
 
 https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html
 
-刷机后，一切正常，测试
+刷机后，一切正常，测试后发现一个问题，用sdkmanager刷的Jetpack4.2，不会充分利用sd卡的空间，刷完后只能几个G的空间了，而其实应该是几十个G。
