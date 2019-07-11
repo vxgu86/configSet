@@ -9,6 +9,8 @@ yolo是直接c++训练好的模型直接跑效率高，还是tf训练好的模�
 
 参考https://github.com/valdivj/jetson-nano-yolov2-darkflow
 
+https://github.com/thtrieu/darkflow
+
 配置nano，tensorflow、opencv等的安装都走了一遍。
 
 但结果不好。
