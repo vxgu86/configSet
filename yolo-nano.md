@@ -1,5 +1,9 @@
 20190627
 
+yolo是直接c++训练好的模型直接跑效率高，还是tf训练好的模型跑起来性能高。
+
+
+
 # 尝试yolo-tf
 
 参考https://github.com/valdivj/jetson-nano-yolov2-darkflow
