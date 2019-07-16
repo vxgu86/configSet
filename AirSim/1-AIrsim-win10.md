@@ -1,9 +1,8 @@
-Airsim是一个基于Unreal Engine（虚幻引擎4）的插件，这意味着Airsim单独是无法跑起来的。用来模拟无人机或无人车在真实环境下的控制，由微软发布在github平台。更多详细文字介绍与视频可以查看github主页。
-
+Airsim是一个基于Unreal Engine（虚幻引擎4）的插件，这意味着Airsim单独是无法跑起来的，只是用来模拟无人机或无人车在真实环境下的控制，
 对于 Unreal Engine 来说，AirSim 其实是作为一个插件存在，是把无人车，无人机以插件的形式加入 Unreal 的场景中。
 
 目前的版本要求为：
-Epic Games Launcher--**Unreal Engine 4.18**（注意在下面的安装之前将current设置为这个版本），可在  “虚拟引擎-学习”处找到“山脉景观” ，
+Epic Games Launcher--**Unreal Engine 4.18**（注意在下面的安装之前将current设置为这个版本）。
 
 **Visual Studio 2017**（VC++ / Windows SDK 8.1两个包要安装）
 
@@ -25,7 +24,7 @@ d:\airsim\airlib\deps\eigen3\eigen\src\core\arch\cuda\half.h : warning C4819: �
   RpcLibServerBase.cpp
 。。。
   MultirotorApiBase.cpp
-。。。
+。。。  
 。。。
 ```
 
