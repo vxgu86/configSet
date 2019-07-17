@@ -2,6 +2,39 @@ Airsim是一个基于Unreal Engine（虚幻引擎4）的插件，这意味着Air
 对于 Unreal Engine 来说，AirSim 其实是作为一个插件存在，是把无人车，无人机以插件的形式加入 Unreal 的场景中。
 
 目前的版本要求为：
+
+win10系统，win7系统下的命令提示行有问题，运行build.cmd时提示：
+``` bash
+设置“SecurityProtocol”时发生异常:“由于枚举值无效，无法将空值转换为类型“Syst
+em.Net.SecurityProtocolType”。请指定以下枚举值之一，然后重试。可能的枚举值为“
+Ssl3、Tls”。”
+所在位置 行:1 字符: 32
++ & { [Net.ServicePointManager]:: <<<< SecurityProtocol = [Net.SecurityProtocol
+Type]::Tls12; iwr https://github.com/rpclib/rpclib/archive/v2.2.1.zip -OutFile
+external\rpclib.zip }
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : PropertyAssignmentException
+
+无法将“iwr”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼
+写，如果包括路径，请确保路径正确，然后重试。
+所在位置 行:1 字符: 89
++ & { [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]:
+:Tls12; iwr <<<<  https://github.com/rpclib/rpclib/archive/v2.2.1.zip -OutFile
+external\rpclib.zip }
+    + CategoryInfo          : ObjectNotFound: (iwr:String) [], CommandNotFound
+   Exception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+无法将“Expand-Archive”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检
+查名称的拼写，如果包括路径，请确保路径正确，然后重试。
+所在位置 行:1 字符: 19
++ & { Expand-Archive <<<<  -Path external\rpclib.zip -DestinationPath external\
+rpclib }
+    + CategoryInfo          : ObjectNotFound: (Expand-Archive:String) [], Comm
+   andNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+```
+
 Epic Games Launcher--**Unreal Engine 4.18**（注意在下面的安装之前将current设置为这个版本）。
 
 **Visual Studio 2017**（VC++ / Windows SDK 8.1两个包要安装）
