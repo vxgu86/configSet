@@ -1,18 +1,15 @@
 # 20190729
 AirGym-master 老版本airsim
+
 Airsim_RL-master新版本，可以跑，而且也是keras，只不过不是keras-rl
+
 openai_drone_gym-master应该也是新版本，没跑过
 
-AirGym-master适应性改进
+## AirGym-master适应性改进
 
 将之调整到新版本的Airsim后，主要对env下的两个文件进行了更改。
 
 改动后频发以下错误，这个问题主要是在take_action之后，怀疑有可能是新版本中 **什么时候加join**的问题。
-
-openai_drone_gym-master在takeaction reset中都加了，其他地方都没加。
-
-先跑之间的AirGym-master在老环境中仿真，发现
-
 ``` bash
   File "D:/AirSim/PythonClient/multirotor/DQN-Train.py", line 96, in <module>
     dqn.fit(env, callbacks=callbacks, nb_steps=251000, visualize=False, verbose=2, log_interval=100)
@@ -34,6 +31,18 @@ openai_drone_gym-master在takeaction reset中都加了，其他地方都没加�
 
 ValueError: cannot reshape array of size 1 into shape (0,0)
 ``` 
+
+openai_drone_gym-master在takeaction reset中都加了，其他地方都没加，straight函数也都没加，这样有意义吗？会不会straight还没结束就执行了takeaction中的?
+
+先跑之间的AirGym-master在老环境中仿真，
+``` bash
+        collided = airgym.take_action(action)
+        
+        print("\n================in AirGym==_step==_take_action")
+        time.sleep(5)
+```
+发现基本都是drone停下来后才打印输出，说明之前版本都是等价于加了join的,在takeaction reset中都加join后再测试。
+
 
 
 
