@@ -2,9 +2,13 @@
 
 ## AirGym-master 老版本airsim
 
+DRLDBackEnd是AirGym的升级版，应该有升级。
+
+openai_drone_gym-master应该也是新版本，而且是基于以上改的，没跑过
+
 Airsim_RL-master新版本，可以跑，而且也是keras，只不过不是keras-rl
 
-openai_drone_gym-master应该也是新版本，没跑过
+
 
 ### AirGym-master
 先调用 根目录下的FileLogger的on_episode_end，后调用lib中rl callbacks.py中的TrainEpisodeLogger的on_episode_end
@@ -14,7 +18,7 @@ openai_drone_gym-master应该也是新版本，没跑过
 目前lib中rl callbacks.py仍是修改过的，保留断点，看是否会有发现。
 
 
-## AirGym-master适应性改进
+### AirGym-master适应性改进
 
 self.goal = [0.0, 25.0] # global xy coordinates
 myAirSimClient
