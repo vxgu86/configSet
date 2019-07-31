@@ -1,4 +1,4 @@
-**callbacks**完全一样，
+**callbacks**与DRLDBackEnd完全一样，
 
 **AirSimClient**与最新版本基本一致，多出来的几个函数挺有意思，
 
@@ -25,6 +25,4 @@
         
 DQN-Train   不一样的地方还不少。
 
-
-
-envs下未看
+envs下也有较多地方不一致，其中有不少他自己的内容。
