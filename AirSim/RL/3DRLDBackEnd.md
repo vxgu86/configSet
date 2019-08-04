@@ -13,9 +13,14 @@ callbacks增加了记录当下最好weights功能
 
             self.moveByVelocity(0, 0, 0, 1)
             self.rotateByYawRate(0, 1)
-            
+忘记是什么样子了，直接在新版本中改好了。
+
 2搞明白下面的东西，方向和飞行的问题。
 https://github.com/microsoft/AirSim/issues/688
 https://github.com/microsoft/AirSim/issues/985
 
 3参考Drone改为新版本。
+
+已经跑起来了，改了一些东西。
+
+现在一个问题，有没有探索空间这个问题，跟AirGym一样，左右rotate的角度是不一样的。要能作出任意想做的动作，
