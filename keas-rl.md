@@ -4,9 +4,12 @@ Often times in reinforcement learning the error rate of the first few steps will
 
 The convergence of stochastic gradient descent is a function of the learning rate and the batch size. When the batch size is increased too much then the needed increase in the learning rate can be such that it is beyond the possible curvature of the loss function. We thus introduce warm up as a means by which we can introduce large learning rates without the instability.
 
+DQN stores the experience in the memory buffer for the first nb_steps_warmup. This is done to get the required size of batch during experience replay.
+
 
 # forward 
 method predicts the action to be taken for any given observation from the given algorithm's policy.
 
 # backward 
 method trains the function approximator (neural network) for a given sample. It also stores the experience replay memory (DQN) for generating samples at the time of learning.
+
