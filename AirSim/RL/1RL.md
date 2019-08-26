@@ -57,3 +57,11 @@ ppo 都改了什么
 
 action从6改为3之后，原来训练的模型就没法用了，提示：
 ValueError: Dimension 1 in both shapes must be equal, but are 3 and 6. Shapes are [256,3] and [256,6]. for 'Assign_22' (op: 'Assign') with input shapes: [256,3], [256,6].
+
+
+20190826
+
+动作空间改为straight left right 
+参数改为-1 （）* 3 -20，重新训练
+
+
