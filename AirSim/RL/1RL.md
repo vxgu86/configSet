@@ -64,4 +64,5 @@ ValueError: Dimension 1 in both shapes must be equal, but are 3 and 6. Shapes ar
 动作空间改为straight left right 
 参数改为-1 （）* 3 -20，重新训练
 
-
+20190830
+发现在视野内没有窗户时会极大概率向前走，而不是转向来搜索，这应该是把前进奖励设置过大，而撞墙惩罚太低的缘故。
