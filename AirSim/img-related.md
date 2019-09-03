@@ -9,11 +9,18 @@ ImageRequest(const std::string& camera_name_val, ImageCaptureBase::ImageType ima
             pixels_as_float = pixels_as_float_val;
             compress = compress_val;
         }
+
+    responses = client.simGetImages([
+        airsim.ImageRequest("0", airsim.ImageType.Segmentation, False, False)])  #scene vision image in uncompressed RGBA array
+带有, False, False的话，程序会卡住。
+直接去掉后，得到的会是RGBA，直接放入DIGITS中作为数据集会提示错误。
+
         
 moveByVelocityAsync(float vx, float vy, float vz, float duration, 
                    DrivetrainType drivetrain, const YawMode& yaw_mode, const std::string& vehicle_name)
-    
+		     
 ```
+
 
 强化学习中，env reward已定，调整寻优policy
 
