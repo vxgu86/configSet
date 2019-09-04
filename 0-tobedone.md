@@ -11,3 +11,6 @@ https://github.com/valdivj/jetson-nano-yolov2-darkflow
 
 nano的img， 原版带没带opencv？
 
+https://math.stackexchange.com/questions/2471635/wind-effect-on-free-fall
+https://ww2.mathworks.cn/matlabcentral/fileexchange/61107-trajectory-of-a-dropped-payload
+https://www.computeraideddesignguide.com/free-fall-modeling-using-matlab/
