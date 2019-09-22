@@ -1,5 +1,4 @@
 每个现象都记下来
-https://www.cnblogs.com/wujf-myblog/p/9644278.html
 
 训练AirGym-master_good到最后时执行学到的策略越来越多，体没体现出很强的策略性来着？？
 
