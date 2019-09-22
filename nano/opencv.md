@@ -28,3 +28,5 @@ sudo apt install libjasper1 libjasper-dev
 成功的解决了问题，其中libjasper1是libjasper-dev的依赖包
 
 
+different aarm64
+
