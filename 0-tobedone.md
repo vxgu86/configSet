@@ -9,7 +9,15 @@ https://github.com/valdivj/jetson-nano-yolov2-darkflow
 
 6G 后行不行，
 
-nano的img， 原版带没带opencv？
+nano的img， 原版带没带opencv？ 3.3.1
+
+https://blog.csdn.net/u012336923/article/details/50474692
+https://blog.csdn.net/weixin_41053564/article/details/81254410
+https://blog.csdn.net/qq_35608277/article/details/83210882
+
+
+
+
 
 https://math.stackexchange.com/questions/2471635/wind-effect-on-free-fall
 https://ww2.mathworks.cn/matlabcentral/fileexchange/61107-trajectory-of-a-dropped-payload
