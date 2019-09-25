@@ -9,3 +9,9 @@
 初步计划用串口直接连接，尚且没有连接线，无法测tx2与px，或者nano与px之间的连通性。
 
 先做线，
+
+
+uname -r system kernel version
+
+docker 
+https://docs.docker.com/install/linux/docker-ce/ubuntu/   install from package 
