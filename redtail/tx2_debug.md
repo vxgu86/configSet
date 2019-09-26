@@ -16,6 +16,8 @@ uname -r system kernel version
 docker 
 https://docs.docker.com/install/linux/docker-ce/ubuntu/   install from package 
 
+
+https://nvidia.github.io/nvidia-docker/
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
   sudo apt-key add -
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
@@ -74,4 +76,11 @@ vxgu@vxgu-SVS15128CCB:~/jetpackafter$ systemctl status nvidia-docker.service
 9月 26 00:26:54 vxgu-SVS15128CCB systemd[1]: Failed to start NVIDIA Docker plugin.
 9月 26 00:26:54 vxgu-SVS15128CCB systemd[1]: nvidia-docker.service: Unit entered failed state.
 9月 26 00:26:54 vxgu-SVS15128CCB systemd[1]: nvidia-docker.service: Failed with result 'start-limit-hit'.
+
+sudo apt install nvidia-modprobe
+
+sudo systemctl start nvidia-docker
+sudo systemctl status nvidia-docker
+
+
 
