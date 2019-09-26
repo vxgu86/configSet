@@ -21,3 +21,8 @@ https://blog.csdn.net/qq_35608277/article/details/83210882
 https://math.stackexchange.com/questions/2471635/wind-effect-on-free-fall
 https://ww2.mathworks.cn/matlabcentral/fileexchange/61107-trajectory-of-a-dropped-payload
 https://www.computeraideddesignguide.com/free-fall-modeling-using-matlab/
+
+
+
+panoramic image stitch  全景图像缝合
+homography   单应性 
