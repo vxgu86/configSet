@@ -1,5 +1,5 @@
 # 1 TypeError: unsupported operand type(s) for -=: 'Retry' and 'int'
-
+```
 Collecting setuptools
 Exception:
 Traceback (most recent call last):
@@ -36,7 +36,19 @@ _stacktrace=sys.exc_info()[2])
 File "/usr/share/python-wheels/urllib3-1.13.1-py2.py3-none-any.whl/urllib3/util/retry.py", line 228, in increment
 total -= 1
 TypeError: unsupported operand type(s) for -=: 'Retry' and 'int'
-
+```
 solution:
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py  \
 python get-pip.py \
+
+# 2 执行sudo apt-get install python-pip 出现错误：E: Unable to locate package python-pip
+python-pip is in the universe repositories, therefore use the steps below:
+```
+sudo apt-get install software-properties-common
+sudo apt-add-repository universe
+sudo apt-get update
+sudo apt-get install python-pip
+```
+
+
+
