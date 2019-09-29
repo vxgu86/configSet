@@ -63,12 +63,12 @@ vxgu@vxgu-SVS15128CCB:~/jetpackafter$ systemctl status nvidia-docker.service
 9月 26 00:26:54 vxgu-SVS15128CCB systemd[1]: nvidia-docker.service: Unit entered failed state.
 9月 26 00:26:54 vxgu-SVS15128CCB systemd[1]: nvidia-docker.service: Failed with result 'start-limit-hit'.
 
-request of nvidia-docker
+```request of nvidia-docker
  NVIDIA drivers >= 340.29 with binary nvidia-modprobe 
  
 sudo apt install nvidia-modprobe
 sudo systemctl start nvidia-docker
 sudo systemctl status nvidia-docker
-
+```
 
 
