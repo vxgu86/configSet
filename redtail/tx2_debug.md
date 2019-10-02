@@ -9,6 +9,9 @@
 # 3 nodes
 
 ## vision
+
+caffe_ros ROS node has a parameter, camera_topic which can be used to change camera topic when running caffe_ros via rosrun or .launch file.
+
 TrailNet view orientation and lateral offset 视方向和横向偏移
 YOLO object detection 
 DSO visual odometry: visual odometry component其输出被转换以摄像机为中心的深度地图，用于障碍物检测和回避。
