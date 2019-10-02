@@ -20,4 +20,9 @@ MAVROS: communicate with px4
 controller
 resolving the ambiguity of needing to turn to correct an orientation error, and needing to fly in a non-straight path to correct a lateral offset error
 
-# 
+# problem
+
+trailnet_debug_gscam.launch no camera in rviz,but in rqt-image.
+trailnet_debug_zed_gscam.launch 
+no camera in rviz,but in rqt-image.
+you pose
