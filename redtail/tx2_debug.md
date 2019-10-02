@@ -4,8 +4,20 @@
 
 这个参数下次再恢复，就可以再连其他热点，否则只能自己作为热点。
 
-2 jetson_ros_install.sh有部分修改
+2 jetson_ros_install.sh有修改
 
-初步计划用串口直接连接，尚且没有连接线，无法测tx2与px，或者nano与px之间的连通性。
+# 3 nodes
 
-先做线，
+## vision
+TrailNet view orientation and lateral offset 视方向和横向偏移
+YOLO object detection 
+DSO visual odometry: visual odometry component其输出被转换以摄像机为中心的深度地图，用于障碍物检测和回避。
+
+GSCam: usb camera input
+JOY:
+MAVROS: communicate with px4
+
+controller
+resolving the ambiguity of needing to turn to correct an orientation error, and needing to fly in a non-straight path to correct a lateral offset error
+
+# 
