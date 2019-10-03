@@ -26,7 +26,9 @@ resolving the ambiguity of needing to turn to correct an orientation error, and 
 # 4 problem
 
 trailnet_debug_gscam.launch 跑起来后在rviz中打不开camera，能在rqt-image中看到，说明gscam是开了，只是与rviz中有问题。
+
 trailnet_debug_zed_gscam.launch 的camera同样问题。
+
     <!-- Start the GSCAM node -->
     <node pkg="gscam" type="gscam" name="gscam">
         <!-- 
@@ -35,10 +37,10 @@ trailnet_debug_zed_gscam.launch 的camera同样问题。
 
         To use 2 sinks (UDP H.265 streaming + ROS topic):
         v4l2src device=$(arg device) ! tee name=t ! queue ! videoconvert ! omxh265enc ! video/x-h265, stream-format=byte-stream ! h265parse ! rtph265pay config-interval=1 ! udpsink host=$(arg host_ip) port=6000 t. ! queue ! video/x-raw, width=$(arg img_width), height=$(arg img_height) ! videoconvert 
-  
         -->
         <param name="gscam_config" value="v4l2src device=$(arg device) ! video/x-raw, width=$(arg img_width), height=$(arg img_height) ! videoconvert" />
         <param name="frame_id"        value="$(arg frame_id)" /> 
     </node>
+
 env name="GSCAM_CONFIG" param name="gscam_config" 不影响
 <param name="frame_id"        value="$(arg frame_id)" />  gscam加了这个参数后就可以看到pose。
