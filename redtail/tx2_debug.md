@@ -4,6 +4,8 @@
 
 这个参数下次再恢复，就可以再连其他热点，否则只能自己作为热点。
 
+tx(image pub, mavros, trailnet_dnn, yolo_dnn, px4-controller) + x64 PC(gazebo, qground), since all components are implemented as ROS nodes, you can mix and match workstations, Jetsons and Dockers in any way you like
+
 2 jetson_ros_install.sh有修改
 
 # 3 nodes
@@ -50,3 +52,6 @@ trailnet_debug_zed_gscam.launch 的camera同样问题。
 
 env name="GSCAM_CONFIG" param name="gscam_config" 不影响
 <param name="frame_id"        value="$(arg frame_id)" />  gscam加了这个参数后就可以看到pose。
+
+
+when controller dies, PX4 turns off the offboard mode and switches back to position hold
