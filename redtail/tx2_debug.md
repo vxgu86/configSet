@@ -10,7 +10,13 @@
 
 ## vision
 
+ZED ROS node then don't need to run gscam node.
+
+recommend using ZED ROS node instead of gscam as it provides rectified and undistorted images. Just make sure to provide a correct topic to caffe_ros node using camera_topic parameter
+
 caffe_ros ROS node has a parameter, camera_topic which can be used to change camera topic when running caffe_ros via rosrun or .launch file.
+
+px4_controller node transforms DNN output into waypoints which are sent (published) to MAVROS
 
 TrailNet view orientation and lateral offset 视方向和横向偏移
 YOLO object detection 
