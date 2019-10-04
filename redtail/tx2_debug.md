@@ -4,6 +4,8 @@
 
 这个参数下次再恢复，就可以再连其他热点，否则只能自己作为热点。
 
+# config
+
 tx(image pub, mavros, trailnet_dnn, yolo_dnn, px4-controller) + x64 PC(gazebo, qground), since all components are implemented as ROS nodes, you can mix and match workstations, Jetsons and Dockers in any way you like
 
 2 jetson_ros_install.sh有修改
@@ -55,3 +57,5 @@ env name="GSCAM_CONFIG" param name="gscam_config" 不影响
 
 
 when controller dies, PX4 turns off the offboard mode and switches back to position hold
+
+if the focal length is wrong - PX4FLOW cannot estimate velocity properly (due to wrong camera model) and so this leads to overcontrol in Pixhawk. It will stabilize, but it will "float" around (typically side to side)
