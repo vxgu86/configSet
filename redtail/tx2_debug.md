@@ -1,22 +1,25 @@
-1 JetPack-L4T-3.3-linux-x64_b39,host上没全装，或者基本没装，jetson上也没装VisionWorks Pack and Compile CUDA Samples。
+# 1 JetPack
+
+JetPack-L4T-3.3-linux-x64_b39,host上没全装，或者基本没装，jetson上也没装VisionWorks Pack and Compile CUDA Samples。
 
 开设wifi时按照Jetson/TX1 WiFi Access Point https://elinux.org/Jetson/TX1_WiFi_Access_Point 打开后正常。
 
 这个参数下次再恢复，就可以再连其他热点，否则只能自己作为热点。
 
-# config
+jetson_ros_install.sh有修改
+
+# 2 config
 
 tx(image pub, mavros, trailnet_dnn, yolo_dnn, px4-controller) + x64 PC(gazebo, qground), since all components are implemented as ROS nodes, you can mix and match workstations, Jetsons and Dockers in any way you like
-
-2 jetson_ros_install.sh有修改
 
 # 3 nodes
 
 ## vision
 
-ZED ROS node then don't need to run gscam node.
+ZED ROS node don't need to run gscam node.
 
 recommend using ZED ROS node instead of gscam as it provides rectified and undistorted images. Just make sure to provide a correct topic to caffe_ros node using camera_topic parameter
+
 
 caffe_ros ROS node has a parameter, camera_topic which can be used to change camera topic when running caffe_ros via rosrun or .launch file.
 
@@ -26,6 +29,7 @@ TrailNet view orientation and lateral offset 视方向和横向偏移
 YOLO object detection 
 DSO visual odometry: visual odometry component其输出被转换以摄像机为中心的深度地图，用于障碍物检测和回避。
 
+## other 
 GSCam: usb camera input
 JOY:
 MAVROS: communicate with px4
@@ -59,3 +63,6 @@ env name="GSCAM_CONFIG" param name="gscam_config" 不影响
 when controller dies, PX4 turns off the offboard mode and switches back to position hold
 
 if the focal length is wrong - PX4FLOW cannot estimate velocity properly (due to wrong camera model) and so this leads to overcontrol in Pixhawk. It will stabilize, but it will "float" around (typically side to side)
+
+For the object detection part, visualization can be done in real-time. For every input frame, DNN (which is based on YOLO v1) outputs matrix of Nx6, where N is number of detected objects. For each object there are 6 numbers: class(label), probability and bounding box coordinates (x, y, width, height). See this code for more information.
+https://github.com/NVIDIA-AI-IOT/redtail/blob/2bfe34fad5fdd3ba2795efac1b2e7d5d09ba4aef/ros/packages/caffe_ros/src/caffe_ros.cpp#L155
