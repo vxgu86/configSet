@@ -39,6 +39,21 @@ resolving the ambiguity of needing to turn to correct an orientation error, and 
 
 # 4 problem
 
+## 1 
+
+if with the tx2 onboard camera, changed v4l2src to nvcamerasrc,
+
+<env name="GSCAM_CONFIG" value="nvcamerasrc
+
+
+Could not get gstreamer sample.
+
+usually in case the camera does not support the resolution specified in GStreamer pipeline (width, height). You can use v4l2-ctl utility to get information about the camera.
+
+using a standard v4l2 UVC camera instead of onboard camera
+
+
+
 trailnet_debug_gscam.launch 跑起来后在rviz中打不开camera，能在rqt-image中看到，说明gscam是开了，只是与rviz中有问题。
 
 trailnet_debug_zed_gscam.launch 的camera同样问题。
