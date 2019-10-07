@@ -1,3 +1,8 @@
+# 1 github clone 指定的tag
+git clone --branch [tags标签] [git地址]
+使用branch参数，后面加上tag标签，最后是git仓库的地址
+
+
 sudo apt-get install autoconf=2.50
 
 每个现象都记下来
