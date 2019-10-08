@@ -26,12 +26,16 @@ caffe_ros ROS node has a parameter, camera_topic which can be used to change cam
 px4_controller node transforms DNN output into waypoints which are sent (published) to MAVROS
 
 TrailNet view orientation and lateral offset 视方向和横向偏移
+
 YOLO object detection 
+
 DSO visual odometry: visual odometry component其输出被转换以摄像机为中心的深度地图，用于障碍物检测和回避。
 
 ## other 
 GSCam: usb camera input
+
 JOY:
+
 MAVROS: communicate with px4
 
 controller
@@ -45,14 +49,14 @@ if with the tx2 onboard camera, changed v4l2src to nvcamerasrc,
 
 <env name="GSCAM_CONFIG" value="nvcamerasrc
 
+using a standard v4l2 UVC camera instead of onboard camera
 
+## 2
 Could not get gstreamer sample.
 
 usually in case the camera does not support the resolution specified in GStreamer pipeline (width, height). You can use v4l2-ctl utility to get information about the camera.
 
-using a standard v4l2 UVC camera instead of onboard camera
-
-
+## 3 DEbug
 
 trailnet_debug_gscam.launch 跑起来后在rviz中打不开camera，能在rqt-image中看到，说明gscam是开了，只是与rviz中有问题。
 
@@ -72,6 +76,7 @@ trailnet_debug_zed_gscam.launch 的camera同样问题。
     </node>
 
 env name="GSCAM_CONFIG" param name="gscam_config" 不影响
+
 <param name="frame_id"        value="$(arg frame_id)" />  gscam加了这个参数后就可以看到pose。
 
 
