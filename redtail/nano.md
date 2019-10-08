@@ -1,7 +1,7 @@
-1 image_publisher gscam
+# 1 image_publisher gscam
 可以用gscam，但nano性能不够，波浪形。
 
-另外，以手机为热点hotpot时，nano与地面站都连接的话，无法stream，目前没找到原因。
+另外，以手机为热点hotpot时，nano与地面站都连，无法stream，目前没找到原因。
 
 
 
