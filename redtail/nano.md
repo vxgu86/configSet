@@ -7,6 +7,20 @@
 
 每个代表啥？
 
+# mavros调试
+
+直接用usb-ttl转换口接nano，收到的都是乱码，
+
+roslanunch mavros apm.launch fcu_url:= ttyTHS1 
+
+后，再发
+
+rosrun mavros mavsafety arm
+
+没问题。需要花时间把ardupilot-redtail熟悉。
+
+
+
 # 3 X-server尝试关掉
 
 
