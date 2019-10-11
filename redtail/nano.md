@@ -11,8 +11,8 @@
 
 直接用usb-ttl转换口接nano，收到的都是乱码，
 
-roslanunch mavros apm.launch fcu_url:= ttyTHS1 
-
+ roslaunch mavros apm.launch fcu_url:="/dev/ttyTHS1:921600" gcs_url:="udp://@YOUR_GCS_IP"
+ 
 后，再发
 
 rosrun mavros mavsafety arm
