@@ -2,6 +2,10 @@
 git clone --branch [tags标签] [git地址]
 使用branch参数，后面加上tag标签，最后是git仓库的地址
 
+# 2 linux查看opencv-version
+
+pkg-config --modversion opencv
+
 
 sudo apt-get install autoconf=2.50
 
