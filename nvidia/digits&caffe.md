@@ -39,7 +39,9 @@ make[1]: *** [tools/CMakeFiles/upgrade_solver_proto_text.dir/all] Error 2
 3  Makefile.config中用系统python，关掉opencv3 相应opencv3的目录
 情况下，cmake。。确认库为/usr/bin/python,能make通过。
 编译digits6.0.0报错，跑不起来。
+编译digits6.0.0-rc.1错，跑不起来。
 编译digits6.1.1通过，训练跑起来报错。
+
 
 Setting up coverage_loss
 Top shape: (1)
