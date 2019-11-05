@@ -1,3 +1,5 @@
+安装protobuf-nvcaffe-digits
+
 # 官方介绍安装protobuf-nvcaffe-digits
 protobuf版本有影响
 ///////////////////////////////////////////////////////////
@@ -6,7 +8,6 @@ protobuf版本有影响
 2  etc/profile中  打开anaconda2
 3  Makefile.config中用anaconda2，开启opencv3 相应opencv3的目录
 情况下，此时cmake..确认python库为anaconda2，不能make通过，
-
 
 tools/CMakeFiles/upgrade_solver_proto_text.dir/build.make:134: recipe for target 'tools/upgrade_solver_proto_text' failed
 make[2]: *** [tools/upgrade_solver_proto_text] Error 1
@@ -28,8 +29,6 @@ make[1]: *** [tools/CMakeFiles/upgrade_solver_proto_text.dir/all] Error 2
 /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9: undefined reference to `TIFFSetWarningHandler@LIBTIFF_4.0'
 //usr/lib/x86_64-linux-gnu/libSM.so.6: undefined reference to `uuid_unparse_lower@UUID_1.0'
 /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9: undefined reference to `TIFFSetErrorHandler@LIBTIFF_4.0'
-
-
 
 ## nvcaffe在
 1  opencv2.4.9
