@@ -1,3 +1,6 @@
+不管怎么设置，nvcaffe的cmake总是找到opencv2.4.9,而不是opencv3
+
+
 安装protobuf-nvcaffe-digits
 
 # 官方介绍安装protobuf-nvcaffe-digits
