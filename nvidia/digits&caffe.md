@@ -7,7 +7,7 @@
 protobuf版本有影响
 ///////////////////////////////////////////////////////////
 ## nvcaffe在
-1  opencv2.4.9
+1  opencv2.4.9 **后来发现这个是可以改的，CMakeCache.txt  但是undefined reference 问题仍在，需要重新编译opencv了**
 2  etc/profile中  打开anaconda2
 3  Makefile.config中用anaconda2，开启opencv3 相应opencv3的目录
 情况下，此时cmake..确认python库为anaconda2，不能make通过，
