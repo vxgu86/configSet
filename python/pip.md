@@ -45,7 +45,7 @@ solution2:
 sudo python -m pip install --upgrade --force pip
 
 solution3:
-sudo pip install ipython==8888 #先指定一个不存在的版本以查看可用版本，发现5版本中有5.5.0（你的可能不一样）
+sudo pip install ipython==8888 #先指定一个不存在的版本以查看可用版本，发现5版本中有5.5.0（你的可能不一样）  \
 sudo pip install ipython==5.5.0
 
 # 2 执行sudo apt-get install python-pip 出现错误：E: Unable to locate package python-pip
